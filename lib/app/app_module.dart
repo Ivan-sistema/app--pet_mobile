@@ -8,8 +8,11 @@ class AppModule extends Module {
   void binds(i) {}
 
   @override
+  // List<ModuleRoute> get routes => [
+  //   ChildRoute('/', child:(_, __) => const  HomePage()),
+  // ];
   void routes(r) {
-    r.child('/', child: (context) => HomePage());
+    r.child('/', child: (_) => const HomePage());
   }
   
 }
