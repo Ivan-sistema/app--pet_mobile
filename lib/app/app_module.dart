@@ -1,18 +1,21 @@
 
 import 'package:flutter_modular/flutter_modular.dart';
-
-import 'home_page.dart';
+import 'package:pet_mobile/app/modules/auth/auth_module.dart';
 
 class AppModule extends Module {
-    @override
-  void binds(i) {}
+  @override
+  List<Bind> get binds => [];
 
   @override
-  // List<ModuleRoute> get routes => [
-  //   ChildRoute('/', child:(_, __) => const  HomePage()),
-  // ];
-  void routes(r) {
-    r.child('/', child: (_) => const HomePage());
-  }
+  List<ModularRoute> get routes =>  [
+    ModuleRoute('/auth', module: AuthModule()), 
+  ];
+
+//   @override
+//   void routes(r) {
+//     r.child('/', child: (context) => APage());
+//     r.module('/b-module', module: BModule());
+//   }
+// }
   
 }

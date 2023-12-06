@@ -9,10 +9,8 @@ class AppWidget extends StatelessWidget {
 
    @override
    Widget build(BuildContext context) {
-
-    Modular.setObservers([
-      asuka.asukaHeroController
-    ]);
+    Modular.setInitialRoute('/auth');
+    Modular.setObservers([asuka.asukaHeroController]);
 
       return ScreenUtilInit(
         designSize: const Size(390, 844),
@@ -23,7 +21,8 @@ class AppWidget extends StatelessWidget {
           return asuka.builder(context, child);
         },
         theme: ThemeData(primarySwatch: Colors.blue),
-        routerConfig: Modular.routerConfig,
+        routeInformationParser: Modular.routeInformationParser,
+        routerDelegate: Modular.routerDelegate,
             ),
       ); //added by extension 
   }
