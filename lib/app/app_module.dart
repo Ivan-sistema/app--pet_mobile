@@ -15,15 +15,7 @@ class AppModule extends Module {
 
   @override
   List<ModularRoute> get routes =>  [
-    ModuleRoute('/auth', module: AuthModule()), 
-    ModuleRoute('/home', module: HomeModule()), 
-  ];
+        ModuleRoute('/auth', module: AuthModule()),
+        ModuleRoute('/home', module: HomeModule()),  ];
 
-//   @override
-//   void routes(r) {
-//     r.child('/', child: (context) => APage());
-//     r.module('/b-module', module: BModule());
-//   }
-// }
-  
 }
