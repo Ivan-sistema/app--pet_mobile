@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pet_mobile/app/core/ui/icons/pet_icons.dart';
+import 'package:pet_mobile/app/core/ui/widgets/pet_default_button.dart';
 import 'package:pet_mobile/app/core/ui/widgets/pet_textform_field.dart';
+import 'package:pet_mobile/app/core/ui/widgets/rounded_button_with_icon.dart';
 
 class LoginPage extends StatelessWidget {
 
@@ -35,7 +37,23 @@ class LoginPage extends StatelessWidget {
                       formKey.currentState?.validate();
                       print(testeEC.text);
                     }, child: Text('Validar')),
-                    Icon(PetIcons.google, color: Colors.black),
+                    RoundedButtonWithIcon(
+                      onTap: (){}, 
+                      width: 200,
+                      color: Colors.blue,
+                      icon: PetIcons.facebook,
+                      label: 'Facebook',
+                      ),
+                    RoundedButtonWithIcon(
+                      onTap: (){}, 
+                      width: 200,
+                      color: Colors.orange,
+                      icon: PetIcons.google,
+                      label: 'Google',
+                      ), 
+                      PetDefaultButton(
+                      label: 'Entrar', 
+                      onPressed: (){})
                  ],
                ),
              ),
